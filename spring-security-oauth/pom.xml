@@ -20,21 +20,21 @@
 						<phase>site</phase>
 						<configuration>
 							<tasks>
-								<mkdir dir="${project.reporting.outputDirectory}/schema" />
+								<mkdir dir="${project.reporting.outputDirectory}/schema"/>
 								<copy todir="${project.reporting.outputDirectory}/schema">
 									<fileset dir="src/main/resources">
-										<include name="**/*.xsd" />
+										<include name="**/*.xsd"/>
 									</fileset>
-									<mapper type="flatten" />
+									<mapper type="flatten"/>
 								</copy>
 
-								<copy file="${project.reporting.outputDirectory}/schema/spring-security-oauth-1.0.xsd" tofile="${project.reporting.outputDirectory}/schema/spring-security-oauth.xsd" />
+								<copy file="${project.reporting.outputDirectory}/schema/spring-security-oauth-1.0.xsd" tofile="${project.reporting.outputDirectory}/schema/spring-security-oauth.xsd"/>
 
 								<zip destfile="${project.reporting.outputDirectory}/sparklr.zip">
-									<zipfileset dir="../samples/oauth/sparklr" includes="pom.xml src/**" prefix="sparklr" />
+									<zipfileset dir="../samples/oauth/sparklr" includes="pom.xml src/**" prefix="sparklr"/>
 								</zip>
 								<zip destfile="${project.reporting.outputDirectory}/tonr.zip">
-									<zipfileset dir="../samples/oauth/tonr" includes="pom.xml src/**" prefix="tonr" />
+									<zipfileset dir="../samples/oauth/tonr" includes="pom.xml src/**" prefix="tonr"/>
 								</zip>
 							</tasks>
 						</configuration>
@@ -156,7 +156,7 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>4.3.3</version>
+			<version>4.5.13</version>
 		</dependency>
 
 		<dependency>

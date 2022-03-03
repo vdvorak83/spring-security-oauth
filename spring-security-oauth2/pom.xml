@@ -14,7 +14,7 @@
 
 	<properties>
 		<jackson1.version>1.9.13</jackson1.version>
-		<jackson2.version>2.3.2</jackson2.version>
+		<jackson2.version>2.9.10.8</jackson2.version>
 		<spring.security.jwt.version>1.0.2.RELEASE</spring.security.jwt.version>
 	</properties>
 
@@ -27,21 +27,21 @@
 						<phase>site</phase>
 						<configuration>
 							<tasks>
-								<mkdir dir="${project.reporting.outputDirectory}/schema" />
+								<mkdir dir="${project.reporting.outputDirectory}/schema"/>
 								<copy todir="${project.reporting.outputDirectory}/schema">
 									<fileset dir="src/main/resources">
-										<include name="**/*.xsd" />
+										<include name="**/*.xsd"/>
 									</fileset>
-									<mapper type="flatten" />
+									<mapper type="flatten"/>
 								</copy>
 
-								<copy file="${project.reporting.outputDirectory}/schema/spring-security-oauth2-2.0.xsd" tofile="${project.reporting.outputDirectory}/schema/spring-security-oauth2.xsd" />
+								<copy file="${project.reporting.outputDirectory}/schema/spring-security-oauth2-2.0.xsd" tofile="${project.reporting.outputDirectory}/schema/spring-security-oauth2.xsd"/>
 
 								<zip destfile="${project.reporting.outputDirectory}/sparklr2.zip">
-									<zipfileset dir="../samples/oauth2/sparklr" includes="pom.xml src/**" prefix="sparklr" />
+									<zipfileset dir="../samples/oauth2/sparklr" includes="pom.xml src/**" prefix="sparklr"/>
 								</zip>
 								<zip destfile="${project.reporting.outputDirectory}/tonr2.zip">
-									<zipfileset dir="../samples/oauth2/tonr" includes="pom.xml src/**" prefix="tonr" />
+									<zipfileset dir="../samples/oauth2/tonr" includes="pom.xml src/**" prefix="tonr"/>
 								</zip>
 							</tasks>
 						</configuration>
@@ -146,7 +146,7 @@
 		<dependency>
         	<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-redis</artifactId>
-			<version>1.5.0.RELEASE</version>
+			<version>1.6.4.RELEASE</version>
 			<optional>true</optional>
 		</dependency>
 
@@ -174,14 +174,14 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>4.3.3</version>
+			<version>4.5.13</version>
             <optional>true</optional>
 		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>4.13.1</version>
 			<scope>compile</scope>
 			<optional>true</optional>
 		</dependency>

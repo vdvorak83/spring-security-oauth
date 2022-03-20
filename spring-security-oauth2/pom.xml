@@ -14,7 +14,7 @@
 
 	<properties>
 		<jackson1.version>1.9.13</jackson1.version>
-		<jackson2.version>2.3.2</jackson2.version>
+		<jackson2.version>2.13.2</jackson2.version>
 		<spring.security.jwt.version>1.0.2.RELEASE</spring.security.jwt.version>
 	</properties>
 
@@ -27,21 +27,21 @@
 						<phase>site</phase>
 						<configuration>
 							<tasks>
-								<mkdir dir="${project.reporting.outputDirectory}/schema" />
+								<mkdir dir="${project.reporting.outputDirectory}/schema"/>
 								<copy todir="${project.reporting.outputDirectory}/schema">
 									<fileset dir="src/main/resources">
-										<include name="**/*.xsd" />
+										<include name="**/*.xsd"/>
 									</fileset>
-									<mapper type="flatten" />
+									<mapper type="flatten"/>
 								</copy>
 
-								<copy file="${project.reporting.outputDirectory}/schema/spring-security-oauth2-2.0.xsd" tofile="${project.reporting.outputDirectory}/schema/spring-security-oauth2.xsd" />
+								<copy file="${project.reporting.outputDirectory}/schema/spring-security-oauth2-2.0.xsd" tofile="${project.reporting.outputDirectory}/schema/spring-security-oauth2.xsd"/>
 
 								<zip destfile="${project.reporting.outputDirectory}/sparklr2.zip">
-									<zipfileset dir="../samples/oauth2/sparklr" includes="pom.xml src/**" prefix="sparklr" />
+									<zipfileset dir="../samples/oauth2/sparklr" includes="pom.xml src/**" prefix="sparklr"/>
 								</zip>
 								<zip destfile="${project.reporting.outputDirectory}/tonr2.zip">
-									<zipfileset dir="../samples/oauth2/tonr" includes="pom.xml src/**" prefix="tonr" />
+									<zipfileset dir="../samples/oauth2/tonr" includes="pom.xml src/**" prefix="tonr"/>
 								</zip>
 							</tasks>
 						</configuration>
